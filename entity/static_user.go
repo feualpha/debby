@@ -1,7 +1,9 @@
 package entity
 
-import (
-	"github.com/feualpha/debby/constant"
+// static user debtor and creditor type constant
+const (
+	CreditorTypeStaticUser = 2
+	DebtorTypeStaticUser   = 4
 )
 
 // StaticUser for non user debtor
@@ -18,7 +20,7 @@ func (sd StaticUser) DebtorID() int {
 
 // DebtorType for implement Debtor
 func (sd StaticUser) DebtorType() int {
-	return constant.DebtorTypeStaticUser
+	return DebtorTypeStaticUser
 }
 
 // CreditorID for implement Creditor
@@ -28,5 +30,5 @@ func (sd StaticUser) CreditorID() int {
 
 // CreditorType for implement Creditor
 func (sd StaticUser) CreditorType() int {
-	return constant.CreditorTypeStaticUser
+	return CreditorTypeStaticUser
 }
